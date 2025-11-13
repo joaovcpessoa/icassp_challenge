@@ -118,7 +118,7 @@ Tentei usar um método wrapper. Eles testam subconjuntos de features treinando u
 - Sequential Forward Selection (SFS)
 - Recursive Feature Elimination (RFE)
 
-Como pode ver eu testei isso e fracessei miseravelmente...
+Como pode ver nos códigos, fracessei miseravelmente...
 
 Dá para tentar métodos de filtragem estatística, analisando cada feature individualmente, sem treinar modelo.
 
@@ -126,15 +126,12 @@ Dá para tentar métodos de filtragem estatística, analisando cada feature indi
 - Correlação entre features (para remover redundantes)
 - Variância baixa (descartar colunas quase constantes)
 
-Só que isso não captura interações entre features e eu não sou médico nem Deus para saber o que de fato é bom ou ruim.
+Só que isso não captura interações entre features e eu não creio que seja possível realizar isso no tempo que temos, pois a quantidade de features é massiva
 
-Tem uma classe de métodos que eu apliquei na minha época de TIM, mas é bruxaria pura... Os famos métodos embedded, com base em importância de features aprendida. 
-No caso o próprio modelo “aprende” quais features importam.
+Tem uma classe de métodos que eu apliquei na minha época de TIM, mas considero eles algo próximo da bruxaria.
 
 - Árvores de decisão / Random Forest / XGBoost / LightGBM → feature_importances_
 - Modelos lineares com regularização L1 (LASSO)
 - Permutation importance / SHAP após o treino
 
 Eu inclusive tentei o random forest no princípio e estava razoável, com bem menos features do que o pessoal conseguiu retirar, talvez seja válido rodar com esse novo conjunto...
-
-Considero esses modelos bruxarias por serem os mais inexplicáveis
